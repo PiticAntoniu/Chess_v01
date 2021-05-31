@@ -12,9 +12,15 @@ namespace Chess_v01
 {
     public partial class Form1 : Form
     {
+        Chess chess = new Chess();
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
