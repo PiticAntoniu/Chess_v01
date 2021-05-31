@@ -22,5 +22,72 @@ namespace Chess_v01
         {
 
         }
+
+        private void addPiecesButton_Click(object sender, EventArgs e)
+        {
+            chess.pieces.Add(
+                new Pawn
+                (
+                    "Pawn",
+                    Color.White,
+                    1,
+                    (1,2),
+                    1,
+                    @"C:\Temp\white_pawn.png"
+                )
+                
+                );
+
+            chess.pieces.Add(
+                new Pawn
+                (
+                    "Pawn",
+                    Color.White,
+                    1,
+                    (2, 2),
+                    1,
+                    @"C:\Temp\white_pawn.png"
+                )
+
+                );
+            chess.pieces.Add(
+               new Pawn
+               (
+                   "Pawn",
+                   Color.White,
+                   1,
+                   (2, 5),
+                   1,
+                   @"C:\Temp\white_pawn.png"
+               )
+
+               );
+
+            chess.pieces.Add(
+    new Knight
+    (
+        "Knight",
+        Color.White,
+        1,
+        (2, 1),
+        3,
+        @"C:\Temp\white_knight.png"
+    )
+
+    );
+
+            Helper.SaveToJson(chess, @"InitialBoard.json");
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //chess.board.Show(this.CreateGraphics());
+            //pictureBox1.BringToFront();
+
+            chess = Helper.LoadFromJson(@"InitialBoard.json");
+
+            chess.ShowPieces(panel1);
+        }
     }
 }
