@@ -34,7 +34,6 @@ namespace Chess_v01
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,8 +54,8 @@ namespace Chess_v01
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Name = "panel1";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
@@ -70,12 +69,12 @@ namespace Chess_v01
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.addPiecesButton);
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

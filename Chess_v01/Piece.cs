@@ -36,10 +36,10 @@ namespace Chess_v01
         {
             PictureBox poza = new PictureBox();
             poza.Load(imageURL);
-            poza.Height = 50;
-            poza.Width = 50;
-            poza.Top = 47 * (10 - position.x);
-            poza.Left = 47 * (8 - position.y);
+            poza.Height = 70;
+            poza.Width = 70;
+            poza.Top = 31 * (20 - position.x * 2);
+            poza.Left = 34 * (20 - (position.y * 2));
             poza.BackColor = Color.Transparent;
             poza.SizeMode = PictureBoxSizeMode.Zoom;
 
