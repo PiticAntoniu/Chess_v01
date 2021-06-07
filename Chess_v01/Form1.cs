@@ -13,14 +13,17 @@ namespace Chess_v01
     public partial class Form1 : Form
     {
         Chess chess = new Chess();
+        BoardView b;
         public Form1()
         {
             InitializeComponent();
+        
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            b = new BoardView(this);
+            b.Show();
         }
 
         private void addPiecesButton_Click(object sender, EventArgs e)
@@ -339,7 +342,8 @@ namespace Chess_v01
 
             chess = Helper.LoadFromJson(@"InitialBoard.json");
 
-            chess.ShowPieces(panel1);
+            //chess.ShowPieces(panel1);
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

@@ -5,8 +5,8 @@ namespace Chess_v01
     internal class Board
     {
         public Square[,] squares;
-        public int rowCount;
-        public int columnCount;
+        public int rowCount = Const.H;
+        public int columnCount = Const.W;
 
         public Board(int boardRowCount, int boardColumnCount)
         {

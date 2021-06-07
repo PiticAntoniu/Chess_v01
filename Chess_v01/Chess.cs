@@ -10,7 +10,7 @@ namespace Chess_v01
 {
     class Chess
     {
-        public Board board = new Board(8,10);
+        public Board board = new Board(Const.H,Const.W);
         public List<Piece> pieces = new List<Piece>();
 
         internal void ShowPieces(Panel p)
